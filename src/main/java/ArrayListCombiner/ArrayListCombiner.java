@@ -1,5 +1,8 @@
 package ArrayListCombiner;
 
+import Employee.Employee;
+import Employee.Manager;
+
 import java.util.ArrayList;
 
 /**
@@ -9,4 +12,12 @@ import java.util.ArrayList;
  * The second method should be called superCombiner and should use ? super E
  */
 public class ArrayListCombiner {
+
+    public static void extendCombiner(ArrayList<Employee> first, ArrayList<? extends Employee> second) {
+        first.addAll(second);
+    }
+
+    public static void superCombiner(ArrayList<? super Manager> first, ArrayList<Manager> second) {
+        first.addAll(second);
+    }
 }
